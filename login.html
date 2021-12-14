@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+        function validateForm() {
+            var d = document.getElementById("email").value;
+            var e = document.getElementById("password").value;
+
+            if (d == "") {
+                alert("Please enter your email");
+                d.focus();
+                return false;
+            }
+
+            else if (e == "") {
+                alert("Please enter your password");
+                e.focus();
+                return false;
+            }
+
+            else if (e.length < 8) {
+                alert("Password must be atleast 8 characters");
+                e.focus();
+                return false;
+            }
+
+            else {
+                alert("Details have been sent");
+            }
+
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="style2.css">
+    <title>Sign Up | DS-STORES</title>
+</head>
+
+<body>
+    <div class="navbar" style="border: none;">
+        <a href="homepage.html" class="navbartext"><b>DS-STORES</b></a>
+        <a class="navbartext" href="homepage.html">HOME</a>
+        <a class="navbartext" href="origin.html">ABOUT US</a>
+        <a class="navbartext" href="login.html">LOGIN</a>
+        <a class="navbartext" href="signup.html">SIGN UP</a>
+        <a class="navbartext" href="contactus.html">CONTACT US</a>
+
+
+        <div class="search">
+
+            <form>
+                <button class="search2"><img src="search.png" height="30px"></button>
+                <input type="text" placeholder="What are you looking for....." name="search">
+            </form>
+
+        </div>
+
+    </div><br>
+
+    <div class="container1">
+
+        <form name="myForm" method="post">
+            <h1 class="regist">Login</h1>
+            <p class="regist">Please enter details to login.</p>
+            <hr>
+
+            <fieldset>
+                <label class="regist"><b>Email*</b></label>
+                <input type="text" placeholder="Enter Email" id="email">
+                <br>
+                <br>
+
+                <label class="regist"><b>Password*</b></label>
+                <input type="password" placeholder="Enter Password" id="password">
+            </fieldset>
+
+
+            <p><a href="#" class="regist">Forgot password?</a></p>
+
+            <button type="submit" class="registerbtn" onclick="return validateForm()">Login</button>
+
+        </form>
+    </div>
+
+
+    <div class="footer">
+        <h2 class="footertext">&copy;2021 DS-STORES</h2>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<script>
+		function validateForm() {
+			var fname = document.getElementById("fname").value;
+			var lname = document.getElementById("lname").value;
+			var subjectx = document.getElementById("subjectx").value;
+			var country = document.getElementById("country").value;
+
+
+			if (fname == "") {
+				alert("First name must be filled out");
+				fname.focus();
+				return false;
+
+			}
+			else if (lname == "") {
+				alert("Last Name must be filled out");
+				lname.focus();
+				return false;
+
+			}
+
+			else if (subjectx == "") {
+				alert("Subject must be stated");
+				subjectx.focus();
+				return false;
+			}
+
+			else if (country == "Select Country") {
+				alert("Country must be stated");
+				country.focus();
+				return false;
+			}
+
+		}
+	</script>
+
+	<link rel="stylesheet" href="style2.css">
+	<title>Contact Us | DS-STORES</title>
+</head>
+
+<body>
+	<div class="navbar" style="border: none;">
+		<a href="homepage.html" class="navbartext"><b>DS-STORES</b></a>
+		<a class="navbartext" href="homepage.html">HOME</a>
+		<a class="navbartext" href="origin.html">ABOUT US</a>
+		<a class="navbartext" href="login.html">LOGIN</a>
+		<a class="navbartext" href="signup.html">SIGN UP</a>
+		<a class="navbartext" href="contactus.html">CONTACT US</a>
+
+
+		<div class="search">
+			<form>
+				<button class="search2"><img src="search.png" height="30px"></button>
+				<input type="text" placeholder="What are you looking for....." name="search">
+			</form>
+
+		</div>
+
+	</div>
+
+
+	<div class="container2">
+		<form name="myForm" onsubmit="return validateForm()">
+
+			<label class="require"><b>First Name</b></label>
+			<input type="text" placeholder="Enter your First Name..." id="fname">
+			<br>
+			<br>
+
+			<label class="require"><b>Last Name</b></label>
+			<input type="text" placeholder="Enter your Last Name..." id="lname">
+			<br>
+			<br>
+
+			<label class="require"><b>Country</b></label>
+
+			<select id="country" name="country" value="">
+				<option value="Select Country">Select Country</option>
+				<option value="Nigeria">Nigeria</option>
+				<option value="USA">USA</option>
+				<option value="Dubai">Dubai</option>
+			</select>
+			<br>
+			<br>
+
+			<label class="require"><b>Subject</b></label>
+			<textarea placeholder="Write something.." style="height:200px" id="subjectx"></textarea>
+
+			<input type="submit" value="Submit">
+
+		</form>
+	</div> <br>
+
+	<div class="footer">
+		<h2 class="footertext">&copy;2021 DS-STORES</h2>
+	</div>
+
+
+
+
+
+
+</body>
+
+</html>
